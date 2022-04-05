@@ -18,12 +18,6 @@ public class ProductService {
 	@Autowired
 	private ProductRepository repository;
 
-	@PostConstruct
-	public void initDB() {
-		repository.saveAll(Stream.of(new Product(101, "Book", 499), new Product(102, "laptop", 78000))
-				.collect(Collectors.toList()));
-	}
-
 	public List<Product> addProduct(List<Product> products) {
 		return repository.saveAll(products);
 	}

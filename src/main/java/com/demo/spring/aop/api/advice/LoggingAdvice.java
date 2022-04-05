@@ -16,9 +16,9 @@ public class LoggingAdvice {
 
 	Logger log = LoggerFactory.getLogger(LoggingAdvice.class);
 	
-	@Pointcut(value="execution(* com.javatechie.spring.aop.api.*.*.*(..) )")
+	@Pointcut(value="execution(* com.demo.spring.aop.api.*.*.*(..) )")
 	public void myPointcut() {
-		
+
 	}
 	
 	@Around("myPointcut()")
